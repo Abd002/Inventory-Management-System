@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
@@ -123,13 +122,13 @@
             this.txtUsername.Image = null;
             this.txtUsername.IsDerivedStyle = true;
             this.txtUsername.Lines = null;
-            this.txtUsername.Location = new System.Drawing.Point(226, 10);
+            this.txtUsername.Location = new System.Drawing.Point(233, 10);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(10);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = false;
-            this.txtUsername.Size = new System.Drawing.Size(510, 29);
+            this.txtUsername.Size = new System.Drawing.Size(503, 69);
             this.txtUsername.Style = MetroSet_UI.Enums.Style.Light;
             this.txtUsername.StyleManager = null;
             this.txtUsername.TabIndex = 2;
@@ -154,13 +153,13 @@
             this.txtPassword.Image = null;
             this.txtPassword.IsDerivedStyle = true;
             this.txtPassword.Lines = null;
-            this.txtPassword.Location = new System.Drawing.Point(226, 99);
+            this.txtPassword.Location = new System.Drawing.Point(233, 99);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(10);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = false;
-            this.txtPassword.Size = new System.Drawing.Size(510, 30);
+            this.txtPassword.Size = new System.Drawing.Size(503, 70);
             this.txtPassword.Style = MetroSet_UI.Enums.Style.Light;
             this.txtPassword.StyleManager = null;
             this.txtPassword.TabIndex = 3;
@@ -175,8 +174,8 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.btnRegister, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnLogIn, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnLogIn, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnRegister, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 188);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -196,7 +195,7 @@
             this.btnRegister.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnRegister.HoverTextColor = System.Drawing.Color.White;
             this.btnRegister.IsDerivedStyle = true;
-            this.btnRegister.Location = new System.Drawing.Point(386, 60);
+            this.btnRegister.Location = new System.Drawing.Point(20, 60);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(20, 60, 20, 60);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -205,14 +204,13 @@
             this.btnRegister.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnRegister.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnRegister.PressTextColor = System.Drawing.Color.White;
-            this.btnRegister.Size = new System.Drawing.Size(340, 59);
+            this.btnRegister.Size = new System.Drawing.Size(333, 59);
             this.btnRegister.Style = MetroSet_UI.Enums.Style.Light;
             this.btnRegister.StyleManager = null;
-            this.btnRegister.TabIndex = 2;
+            this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "Register";
             this.btnRegister.ThemeAuthor = "Narwin";
             this.btnRegister.ThemeName = "MetroLite";
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnLogIn
             // 
@@ -225,7 +223,7 @@
             this.btnLogIn.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btnLogIn.HoverTextColor = System.Drawing.Color.White;
             this.btnLogIn.IsDerivedStyle = true;
-            this.btnLogIn.Location = new System.Drawing.Point(20, 60);
+            this.btnLogIn.Location = new System.Drawing.Point(393, 60);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(20, 60, 20, 60);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -234,14 +232,13 @@
             this.btnLogIn.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnLogIn.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btnLogIn.PressTextColor = System.Drawing.Color.White;
-            this.btnLogIn.Size = new System.Drawing.Size(340, 59);
+            this.btnLogIn.Size = new System.Drawing.Size(333, 59);
             this.btnLogIn.Style = MetroSet_UI.Enums.Style.Light;
             this.btnLogIn.StyleManager = null;
-            this.btnLogIn.TabIndex = 1;
+            this.btnLogIn.TabIndex = 4;
             this.btnLogIn.Text = "LogIn";
             this.btnLogIn.ThemeAuthor = "Narwin";
             this.btnLogIn.ThemeName = "MetroLite";
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // LogIn
             // 
@@ -255,6 +252,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
 

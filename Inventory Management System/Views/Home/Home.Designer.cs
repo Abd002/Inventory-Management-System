@@ -30,10 +30,10 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtLogOut = new MetroSet_UI.Controls.MetroSetButton();
-            this.txtProducts = new MetroSet_UI.Controls.MetroSetButton();
-            this.txtReports = new MetroSet_UI.Controls.MetroSetButton();
-            this.txtAdmin = new MetroSet_UI.Controls.MetroSetButton();
+            this.btnLogOut = new MetroSet_UI.Controls.MetroSetButton();
+            this.btnProducts = new MetroSet_UI.Controls.MetroSetButton();
+            this.btnReports = new MetroSet_UI.Controls.MetroSetButton();
+            this.btnAdmin = new MetroSet_UI.Controls.MetroSetButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,10 +61,10 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.txtLogOut, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtProducts, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtReports, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtAdmin, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnLogOut, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnProducts, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnReports, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAdmin, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 299);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -73,113 +73,117 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(754, 68);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // txtLogOut
+            // btnLogOut
             // 
-            this.txtLogOut.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtLogOut.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtLogOut.DisabledForeColor = System.Drawing.Color.Gray;
-            this.txtLogOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtLogOut.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtLogOut.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtLogOut.HoverTextColor = System.Drawing.Color.White;
-            this.txtLogOut.IsDerivedStyle = true;
-            this.txtLogOut.Location = new System.Drawing.Point(567, 3);
-            this.txtLogOut.Name = "txtLogOut";
-            this.txtLogOut.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtLogOut.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtLogOut.NormalTextColor = System.Drawing.Color.White;
-            this.txtLogOut.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtLogOut.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtLogOut.PressTextColor = System.Drawing.Color.White;
-            this.txtLogOut.Size = new System.Drawing.Size(184, 62);
-            this.txtLogOut.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtLogOut.StyleManager = null;
-            this.txtLogOut.TabIndex = 4;
-            this.txtLogOut.Text = "LogOut";
-            this.txtLogOut.ThemeAuthor = "Narwin";
-            this.txtLogOut.ThemeName = "MetroLite";
+            this.btnLogOut.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnLogOut.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnLogOut.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnLogOut.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnLogOut.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnLogOut.HoverTextColor = System.Drawing.Color.White;
+            this.btnLogOut.IsDerivedStyle = true;
+            this.btnLogOut.Location = new System.Drawing.Point(567, 3);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnLogOut.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnLogOut.NormalTextColor = System.Drawing.Color.White;
+            this.btnLogOut.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnLogOut.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnLogOut.PressTextColor = System.Drawing.Color.White;
+            this.btnLogOut.Size = new System.Drawing.Size(184, 62);
+            this.btnLogOut.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnLogOut.StyleManager = null;
+            this.btnLogOut.TabIndex = 4;
+            this.btnLogOut.Text = "LogOut";
+            this.btnLogOut.ThemeAuthor = "Narwin";
+            this.btnLogOut.ThemeName = "MetroLite";
+            this.btnLogOut.Click += new System.EventHandler(this.txtLogOut_Click);
             // 
-            // txtProducts
+            // btnProducts
             // 
-            this.txtProducts.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtProducts.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtProducts.DisabledForeColor = System.Drawing.Color.Gray;
-            this.txtProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtProducts.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtProducts.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtProducts.HoverTextColor = System.Drawing.Color.White;
-            this.txtProducts.IsDerivedStyle = true;
-            this.txtProducts.Location = new System.Drawing.Point(379, 3);
-            this.txtProducts.Name = "txtProducts";
-            this.txtProducts.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtProducts.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtProducts.NormalTextColor = System.Drawing.Color.White;
-            this.txtProducts.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtProducts.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtProducts.PressTextColor = System.Drawing.Color.White;
-            this.txtProducts.Size = new System.Drawing.Size(182, 62);
-            this.txtProducts.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtProducts.StyleManager = null;
-            this.txtProducts.TabIndex = 2;
-            this.txtProducts.Text = "Products";
-            this.txtProducts.ThemeAuthor = "Narwin";
-            this.txtProducts.ThemeName = "MetroLite";
+            this.btnProducts.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnProducts.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnProducts.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnProducts.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnProducts.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnProducts.HoverTextColor = System.Drawing.Color.White;
+            this.btnProducts.IsDerivedStyle = true;
+            this.btnProducts.Location = new System.Drawing.Point(379, 3);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnProducts.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnProducts.NormalTextColor = System.Drawing.Color.White;
+            this.btnProducts.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnProducts.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnProducts.PressTextColor = System.Drawing.Color.White;
+            this.btnProducts.Size = new System.Drawing.Size(182, 62);
+            this.btnProducts.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnProducts.StyleManager = null;
+            this.btnProducts.TabIndex = 2;
+            this.btnProducts.Text = "Products";
+            this.btnProducts.ThemeAuthor = "Narwin";
+            this.btnProducts.ThemeName = "MetroLite";
+            this.btnProducts.Click += new System.EventHandler(this.txtProducts_Click);
             // 
-            // txtReports
+            // btnReports
             // 
-            this.txtReports.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtReports.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtReports.DisabledForeColor = System.Drawing.Color.Gray;
-            this.txtReports.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtReports.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtReports.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtReports.HoverTextColor = System.Drawing.Color.White;
-            this.txtReports.IsDerivedStyle = true;
-            this.txtReports.Location = new System.Drawing.Point(191, 3);
-            this.txtReports.Name = "txtReports";
-            this.txtReports.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtReports.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtReports.NormalTextColor = System.Drawing.Color.White;
-            this.txtReports.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtReports.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtReports.PressTextColor = System.Drawing.Color.White;
-            this.txtReports.Size = new System.Drawing.Size(182, 62);
-            this.txtReports.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtReports.StyleManager = null;
-            this.txtReports.TabIndex = 1;
-            this.txtReports.Text = "Reports";
-            this.txtReports.ThemeAuthor = "Narwin";
-            this.txtReports.ThemeName = "MetroLite";
+            this.btnReports.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnReports.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnReports.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnReports.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnReports.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnReports.HoverTextColor = System.Drawing.Color.White;
+            this.btnReports.IsDerivedStyle = true;
+            this.btnReports.Location = new System.Drawing.Point(191, 3);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnReports.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnReports.NormalTextColor = System.Drawing.Color.White;
+            this.btnReports.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnReports.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnReports.PressTextColor = System.Drawing.Color.White;
+            this.btnReports.Size = new System.Drawing.Size(182, 62);
+            this.btnReports.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnReports.StyleManager = null;
+            this.btnReports.TabIndex = 1;
+            this.btnReports.Text = "Reports";
+            this.btnReports.ThemeAuthor = "Narwin";
+            this.btnReports.ThemeName = "MetroLite";
+            this.btnReports.Click += new System.EventHandler(this.txtReports_Click);
             // 
-            // txtAdmin
+            // btnAdmin
             // 
-            this.txtAdmin.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtAdmin.DisabledForeColor = System.Drawing.Color.Gray;
-            this.txtAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtAdmin.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtAdmin.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.txtAdmin.HoverTextColor = System.Drawing.Color.White;
-            this.txtAdmin.IsDerivedStyle = true;
-            this.txtAdmin.Location = new System.Drawing.Point(3, 3);
-            this.txtAdmin.Name = "txtAdmin";
-            this.txtAdmin.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtAdmin.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.txtAdmin.NormalTextColor = System.Drawing.Color.White;
-            this.txtAdmin.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtAdmin.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.txtAdmin.PressTextColor = System.Drawing.Color.White;
-            this.txtAdmin.Size = new System.Drawing.Size(182, 62);
-            this.txtAdmin.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtAdmin.StyleManager = null;
-            this.txtAdmin.TabIndex = 0;
-            this.txtAdmin.Text = "Admin";
-            this.txtAdmin.ThemeAuthor = "Narwin";
-            this.txtAdmin.ThemeName = "MetroLite";
+            this.btnAdmin.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAdmin.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAdmin.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAdmin.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAdmin.HoverTextColor = System.Drawing.Color.White;
+            this.btnAdmin.IsDerivedStyle = true;
+            this.btnAdmin.Location = new System.Drawing.Point(3, 3);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAdmin.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAdmin.NormalTextColor = System.Drawing.Color.White;
+            this.btnAdmin.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAdmin.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAdmin.PressTextColor = System.Drawing.Color.White;
+            this.btnAdmin.Size = new System.Drawing.Size(182, 62);
+            this.btnAdmin.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnAdmin.StyleManager = null;
+            this.btnAdmin.TabIndex = 0;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.ThemeAuthor = "Narwin";
+            this.btnAdmin.ThemeName = "MetroLite";
+            this.btnAdmin.Click += new System.EventHandler(this.txtAdmin_Click);
             // 
             // Home
             // 
@@ -199,9 +203,9 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private MetroSet_UI.Controls.MetroSetButton txtAdmin;
-        private MetroSet_UI.Controls.MetroSetButton txtLogOut;
-        private MetroSet_UI.Controls.MetroSetButton txtProducts;
-        private MetroSet_UI.Controls.MetroSetButton txtReports;
+        private MetroSet_UI.Controls.MetroSetButton btnAdmin;
+        private MetroSet_UI.Controls.MetroSetButton btnLogOut;
+        private MetroSet_UI.Controls.MetroSetButton btnProducts;
+        private MetroSet_UI.Controls.MetroSetButton btnReports;
     }
 }

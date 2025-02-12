@@ -21,9 +21,8 @@ namespace Inventory_Management_System
 
             _viewModel = new RegisterViewModel();
 
-            txtUsername.DataBindings.Add("Text", _viewModel, "Username");
-            txtPassword.DataBindings.Add("Text", _viewModel, "Password");
-            txtEmail.DataBindings.Add("Text", _viewModel, "Email");
+            txtUsername.DataBindings.Add("Text", _viewModel, "Username", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtPassword.DataBindings.Add("Text", _viewModel, "Password", true, DataSourceUpdateMode.OnPropertyChanged);
 
             btnRegister.Click += (sender, args) => _viewModel.LoginCommand.Execute(null);
         }

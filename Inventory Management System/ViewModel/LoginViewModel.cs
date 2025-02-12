@@ -71,7 +71,7 @@ namespace Inventory_Management_System.ViewModel
         }
         private void Register()
         {
-            Utilities.ChangeForm((Form)Application.OpenForms["LogIn"], new Products());
+            Utilities.ChangeForm((Form)Application.OpenForms["LogIn"], new Register());
         }
 
 

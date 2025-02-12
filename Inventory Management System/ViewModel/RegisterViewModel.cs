@@ -48,25 +48,18 @@ namespace Inventory_Management_System.ViewModel
                 }
             }
         }
-        public string Email
-        {
-            get { return _user.Email; }
-            set
-            {
-                if (_user.Email != value)
-                {
-                    _user.Email = value;
-                    OnPropertyChanged(nameof(Email));
-                }
-            }
-        }
 
         private void Register()
         {
             Console.WriteLine("Register button clicked");
-            if(_user.Username == null || _user.Password == null || _user.Email == null)
+            if(_user.Username == null || _user.Password == null)
             {
                 MessageBox.Show("Please fill in all fields");
+                return;
+            }
+            if(_user.Username.Length < 3 || _user.Password.Length < 3)
+            {
+                MessageBox.Show("Username and password must be at least 3 characters long");
                 return;
             }
             if(Services.DatabaseService.GetUser(_user.Username) != null)
@@ -74,6 +67,7 @@ namespace Inventory_Management_System.ViewModel
                 MessageBox.Show("Username already exists");
                 return;
             }
+
 
             Services.DatabaseService.AddUser(_user);
             MessageBox.Show("User added successfully");

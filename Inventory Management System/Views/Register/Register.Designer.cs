@@ -33,11 +33,8 @@
             this.btnRegister = new MetroSet_UI.Controls.MetroSetButton();
             this.btnBack = new MetroSet_UI.Controls.MetroSetButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroSetTextBox5 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.txtPassword = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.txtEmail = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.txtUsername = new MetroSet_UI.Controls.MetroSetTextBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -139,53 +136,20 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.77778F));
-            this.tableLayoutPanel2.Controls.Add(this.metroSetTextBox5, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtPassword, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtEmail, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroSetLabel5, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroSetLabel3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtPassword, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroSetLabel5, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.metroSetLabel1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtUsername, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(754, 179);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // metroSetTextBox5
-            // 
-            this.metroSetTextBox5.AutoCompleteCustomSource = null;
-            this.metroSetTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.metroSetTextBox5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.metroSetTextBox5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.metroSetTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroSetTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.metroSetTextBox5.Image = null;
-            this.metroSetTextBox5.IsDerivedStyle = true;
-            this.metroSetTextBox5.Lines = null;
-            this.metroSetTextBox5.Location = new System.Drawing.Point(170, 135);
-            this.metroSetTextBox5.MaxLength = 32767;
-            this.metroSetTextBox5.Multiline = false;
-            this.metroSetTextBox5.Name = "metroSetTextBox5";
-            this.metroSetTextBox5.ReadOnly = false;
-            this.metroSetTextBox5.Size = new System.Drawing.Size(581, 41);
-            this.metroSetTextBox5.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetTextBox5.StyleManager = null;
-            this.metroSetTextBox5.TabIndex = 10;
-            this.metroSetTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox5.ThemeAuthor = "Narwin";
-            this.metroSetTextBox5.ThemeName = "MetroLite";
-            this.metroSetTextBox5.UseSystemPasswordChar = false;
-            this.metroSetTextBox5.WatermarkText = "";
             // 
             // txtPassword
             // 
@@ -202,12 +166,12 @@
             this.txtPassword.Image = null;
             this.txtPassword.IsDerivedStyle = true;
             this.txtPassword.Lines = null;
-            this.txtPassword.Location = new System.Drawing.Point(170, 91);
+            this.txtPassword.Location = new System.Drawing.Point(170, 92);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = false;
-            this.txtPassword.Size = new System.Drawing.Size(581, 38);
+            this.txtPassword.Size = new System.Drawing.Size(581, 84);
             this.txtPassword.Style = MetroSet_UI.Enums.Style.Light;
             this.txtPassword.StyleManager = null;
             this.txtPassword.TabIndex = 8;
@@ -217,44 +181,14 @@
             this.txtPassword.UseSystemPasswordChar = false;
             this.txtPassword.WatermarkText = "";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.AutoCompleteCustomSource = null;
-            this.txtEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtEmail.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtEmail.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtEmail.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtEmail.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtEmail.Image = null;
-            this.txtEmail.IsDerivedStyle = true;
-            this.txtEmail.Lines = null;
-            this.txtEmail.Location = new System.Drawing.Point(170, 47);
-            this.txtEmail.MaxLength = 32767;
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = false;
-            this.txtEmail.Size = new System.Drawing.Size(581, 38);
-            this.txtEmail.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtEmail.StyleManager = null;
-            this.txtEmail.TabIndex = 7;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEmail.ThemeAuthor = "Narwin";
-            this.txtEmail.ThemeName = "MetroLite";
-            this.txtEmail.UseSystemPasswordChar = false;
-            this.txtEmail.WatermarkText = "";
-            // 
             // metroSetLabel5
             // 
             this.metroSetLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroSetLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.metroSetLabel5.IsDerivedStyle = true;
-            this.metroSetLabel5.Location = new System.Drawing.Point(3, 88);
+            this.metroSetLabel5.Location = new System.Drawing.Point(3, 89);
             this.metroSetLabel5.Name = "metroSetLabel5";
-            this.metroSetLabel5.Size = new System.Drawing.Size(161, 44);
+            this.metroSetLabel5.Size = new System.Drawing.Size(161, 90);
             this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel5.StyleManager = null;
             this.metroSetLabel5.TabIndex = 5;
@@ -263,22 +197,6 @@
             this.metroSetLabel5.ThemeAuthor = "Narwin";
             this.metroSetLabel5.ThemeName = "MetroLite";
             // 
-            // metroSetLabel3
-            // 
-            this.metroSetLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroSetLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel3.IsDerivedStyle = true;
-            this.metroSetLabel3.Location = new System.Drawing.Point(3, 44);
-            this.metroSetLabel3.Name = "metroSetLabel3";
-            this.metroSetLabel3.Size = new System.Drawing.Size(161, 44);
-            this.metroSetLabel3.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetLabel3.StyleManager = null;
-            this.metroSetLabel3.TabIndex = 3;
-            this.metroSetLabel3.Text = "Email";
-            this.metroSetLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel3.ThemeAuthor = "Narwin";
-            this.metroSetLabel3.ThemeName = "MetroLite";
-            // 
             // metroSetLabel1
             // 
             this.metroSetLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -286,7 +204,7 @@
             this.metroSetLabel1.IsDerivedStyle = true;
             this.metroSetLabel1.Location = new System.Drawing.Point(3, 0);
             this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(161, 44);
+            this.metroSetLabel1.Size = new System.Drawing.Size(161, 89);
             this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel1.StyleManager = null;
             this.metroSetLabel1.TabIndex = 1;
@@ -315,7 +233,7 @@
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = false;
-            this.txtUsername.Size = new System.Drawing.Size(581, 38);
+            this.txtUsername.Size = new System.Drawing.Size(581, 83);
             this.txtUsername.Style = MetroSet_UI.Enums.Style.Light;
             this.txtUsername.StyleManager = null;
             this.txtUsername.TabIndex = 6;
@@ -345,11 +263,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel5;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel3;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
-        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox5;
         private MetroSet_UI.Controls.MetroSetTextBox txtPassword;
-        private MetroSet_UI.Controls.MetroSetTextBox txtEmail;
         private MetroSet_UI.Controls.MetroSetTextBox txtUsername;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private MetroSet_UI.Controls.MetroSetButton btnRegister;

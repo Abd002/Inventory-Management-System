@@ -16,7 +16,7 @@ namespace Inventory_Management_System.Services
         {
             password = hashPassword(password);
             User user = DatabaseService.GetUser(username);
-            if (DatabaseService.GetUser(username) == null)
+            if (user == null)
             {
                 return null;
             }
