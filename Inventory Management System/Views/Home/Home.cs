@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Inventory_Management_System
 {
-    public partial class LogIn : MetroForm
+    public partial class Home : MetroForm
     {
-        public LogIn()
+        public Home()
         {
             InitializeComponent();
         }
