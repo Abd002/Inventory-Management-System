@@ -1,5 +1,6 @@
 ﻿using Inventory_Management_System.ViewModel;
 using Inventory_Management_System.Views.Products;
+using Inventory_Management_System.Views.Report;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,7 @@ namespace Inventory_Management_System
 
         private void txtReports_Click(object sender, EventArgs e)
         {
-
+            Utilities.ChangeForm(this, new Report());
         }
 
         private void txtProducts_Click(object sender, EventArgs e)
