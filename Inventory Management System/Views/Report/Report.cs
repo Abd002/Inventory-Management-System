@@ -22,40 +22,16 @@ namespace Inventory_Management_System.Views.Report
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                // Define Connection String
-                string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=InventoryDB;Integrated Security=True;";
 
-                // Create SQL Query for Inventory Report
-                string query = "SELECT ProductID, ProductName, Description, QuantityInStock, Price, Category, SupplierName FROM Inventory.Products"; // Example: Low Stock Items
+            DataTable dt = DatabaseService.GetProducts();
 
-                // Connect to Database
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    con.Open();
-                    SqlDataAdapter da = new SqlDataAdapter(query, con);
-                    DataSet ds = new DataSet();
-                    Console.WriteLine(ds);
-                    da.Fill(ds, "Products");
+            ReportDocument cryRpt = new ReportDocument();
+            cryRpt.Load(@"C:\Users\abdel\source\repos\SimpleDataApp\SimpleDataApp\CrystalReport1.rpt"); 
 
-                    // Load Crystal Report
-                    ReportDocument cryRpt = new ReportDocument();
-                    cryRpt.Load(@"C:\Users\abdel\source\repos\SimpleDataApp\SimpleDataApp\CrystalReport1.rpt");  // Update the correct path
+            cryRpt.SetDataSource(dt); 
 
-                    // Set DataSource
-                    cryRpt.SetDataSource(ds.Tables["Products"]);
-
-                    // Bind to CrystalReportViewer
-                    crystalReportViewer1.ReportSource = cryRpt;
-                    crystalReportViewer1.Refresh();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Loading Report: " + ex.Message);
-            }
-
+            crystalReportViewer1.ReportSource = cryRpt;
+            crystalReportViewer1.Refresh();
         }
     }
 }
