@@ -57,10 +57,10 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txtNameSearch = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.comboBoxStock = new MetroSet_UI.Controls.MetroSetComboBox();
             this.btnSearch = new MetroSet_UI.Controls.MetroSetButton();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBoxStock = new MetroSet_UI.Controls.MetroSetComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tblAdmin.SuspendLayout();
@@ -658,6 +658,39 @@
             this.metroLabel4.Text = "Name";
             this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // comboBoxStock
+            // 
+            this.comboBoxStock.AllowDrop = true;
+            this.comboBoxStock.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboBoxStock.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.comboBoxStock.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboBoxStock.CausesValidation = false;
+            this.comboBoxStock.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.comboBoxStock.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.comboBoxStock.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.comboBoxStock.Dock = System.Windows.Forms.DockStyle.Left;
+            this.comboBoxStock.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBoxStock.FormattingEnabled = true;
+            this.comboBoxStock.IsDerivedStyle = true;
+            this.comboBoxStock.ItemHeight = 20;
+            this.comboBoxStock.Items.AddRange(new object[] {
+            "OUT OF STOCK",
+            "LOW STOCK",
+            "HIGH STOCK"});
+            this.comboBoxStock.Location = new System.Drawing.Point(94, 84);
+            this.comboBoxStock.Name = "comboBoxStock";
+            this.comboBoxStock.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.comboBoxStock.SelectedItemForeColor = System.Drawing.Color.White;
+            this.comboBoxStock.Size = new System.Drawing.Size(202, 26);
+            this.comboBoxStock.Style = MetroSet_UI.Enums.Style.Light;
+            this.comboBoxStock.StyleManager = null;
+            this.comboBoxStock.TabIndex = 8;
+            this.comboBoxStock.ThemeAuthor = "Narwin";
+            this.comboBoxStock.ThemeName = "MetroLite";
+            // 
             // btnSearch
             // 
             this.btnSearch.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -701,39 +734,6 @@
             // productsBindingSource
             // 
             this.productsBindingSource.DataMember = "Products";
-            // 
-            // comboBoxStock
-            // 
-            this.comboBoxStock.AllowDrop = true;
-            this.comboBoxStock.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboBoxStock.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.comboBoxStock.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboBoxStock.CausesValidation = false;
-            this.comboBoxStock.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.comboBoxStock.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.comboBoxStock.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.comboBoxStock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBoxStock.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboBoxStock.FormattingEnabled = true;
-            this.comboBoxStock.IsDerivedStyle = true;
-            this.comboBoxStock.ItemHeight = 20;
-            this.comboBoxStock.Items.AddRange(new object[] {
-            "OUT OF STOCK",
-            "LOW STOCK",
-            "HIGH STOCK"});
-            this.comboBoxStock.Location = new System.Drawing.Point(94, 84);
-            this.comboBoxStock.Name = "comboBoxStock";
-            this.comboBoxStock.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.comboBoxStock.SelectedItemForeColor = System.Drawing.Color.White;
-            this.comboBoxStock.Size = new System.Drawing.Size(202, 26);
-            this.comboBoxStock.Style = MetroSet_UI.Enums.Style.Light;
-            this.comboBoxStock.StyleManager = null;
-            this.comboBoxStock.TabIndex = 8;
-            this.comboBoxStock.ThemeAuthor = "Narwin";
-            this.comboBoxStock.ThemeName = "MetroLite";
             // 
             // Products
             // 

@@ -28,48 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddAdmin = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAddAdmin
+            // metroSetControlBox1
             // 
-            this.btnAddAdmin.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddAdmin.DisabledForeColor = System.Drawing.Color.Gray;
-            this.btnAddAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAddAdmin.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnAddAdmin.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnAddAdmin.HoverTextColor = System.Drawing.Color.White;
-            this.btnAddAdmin.IsDerivedStyle = true;
-            this.btnAddAdmin.Location = new System.Drawing.Point(312, 371);
-            this.btnAddAdmin.Name = "btnAddAdmin";
-            this.btnAddAdmin.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddAdmin.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnAddAdmin.NormalTextColor = System.Drawing.Color.White;
-            this.btnAddAdmin.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnAddAdmin.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnAddAdmin.PressTextColor = System.Drawing.Color.White;
-            this.btnAddAdmin.Size = new System.Drawing.Size(174, 23);
-            this.btnAddAdmin.Style = MetroSet_UI.Enums.Style.Light;
-            this.btnAddAdmin.StyleManager = null;
-            this.btnAddAdmin.TabIndex = 1;
-            this.btnAddAdmin.Text = "Add Admin";
-            this.btnAddAdmin.ThemeAuthor = "Narwin";
-            this.btnAddAdmin.ThemeName = "MetroLite";
+            this.metroSetControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroSetControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
+            this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroSetControlBox1.IsDerivedStyle = true;
+            this.metroSetControlBox1.Location = new System.Drawing.Point(699, 1);
+            this.metroSetControlBox1.MaximizeBox = true;
+            this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MaximizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeBox = true;
+            this.metroSetControlBox1.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MinimizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.Name = "metroSetControlBox1";
+            this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
+            this.metroSetControlBox1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetControlBox1.StyleManager = null;
+            this.metroSetControlBox1.TabIndex = 0;
+            this.metroSetControlBox1.Text = "metroSetControlBox1";
+            this.metroSetControlBox1.ThemeAuthor = "Narwin";
+            this.metroSetControlBox1.ThemeName = "MetroLite";
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 33);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.Size = new System.Drawing.Size(776, 405);
+            this.dataGridView.TabIndex = 1;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAddAdmin);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.metroSetControlBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
             this.Text = "Admin";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MetroSet_UI.Controls.MetroSetButton btnAddAdmin;
+
+        private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

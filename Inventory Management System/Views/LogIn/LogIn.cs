@@ -1,6 +1,5 @@
-﻿using Inventory_Management_System.Models;
+﻿using Inventory_Management_System.Services;
 using Inventory_Management_System.ViewModel;
-using Inventory_Management_System.Views.Products;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,15 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Management_System
+namespace Inventory_Management_System.Views.LoginForm
 {
-    public partial class LogIn : MetroFramework.Forms.MetroForm
+    public partial class LogIn : Form
     {
         private LoginViewModel _viewModel;
-
         public LogIn()
         {
-
             InitializeComponent();
             _viewModel = new LoginViewModel();
 
@@ -30,20 +27,18 @@ namespace Inventory_Management_System
 
             // Bind the LoginCommand to the button
             btnLogIn.Click += (sender, args) => _viewModel.LoginCommand.Execute(null);
-            btnRegister.Click += (sender, args) => _viewModel.RegisterCommand.Execute(null);
+
         }
-
-
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-
-
+            AuthServices.Authenticate(_viewModel.Username, _viewModel.Password);
+            Utilities.ChangeForm(this, new Home());
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            Utilities.ChangeForm(this, new Inventory_Management_System.Views.Register.Register());
         }
     }
 }

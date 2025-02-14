@@ -7,10 +7,9 @@ namespace Inventory_Management_System
     {
         public static void ChangeForm(Form currentForm, Form newForm)
         {
-            
-            currentForm.Hide();
             newForm.Show();
-            newForm.FormClosed += (s, args) => currentForm.Close(); 
+            currentForm.Hide();
+            newForm.FormClosed += (s, args) => currentForm.Close();
 
         }
 

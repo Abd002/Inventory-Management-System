@@ -1,37 +1,30 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
-using Inventory_Management_System.Services;
+using Inventory_Management_System.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Inventory_Management_System.Views.Report
 {
     public partial class Report : MetroFramework.Forms.MetroForm
     {
+        private ReportViewModel _viewModel;
+
         public Report()
         {
             InitializeComponent();
+            _viewModel = new ReportViewModel();
+
+            _viewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-
-            DataTable dt = DatabaseService.GetProducts();
-
-            ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\abdel\source\repos\SimpleDataApp\SimpleDataApp\CrystalReport1.rpt"); 
-
-            cryRpt.SetDataSource(dt); 
-
-            crystalReportViewer1.ReportSource = cryRpt;
-            crystalReportViewer1.Refresh();
+            if (e.PropertyName == nameof(ReportViewModel.ReportDocument))
+            {
+                crystalReportViewer1.ReportSource = _viewModel.ReportDocument;
+                crystalReportViewer1.Refresh();
+            }
         }
+
     }
 }

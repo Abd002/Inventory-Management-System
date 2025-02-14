@@ -45,7 +45,6 @@ namespace Inventory_Management_System.Views.Products
 
             // Bind the LoginCommand to the button
             btnSearch.Click += (sender, args) => _viewModel.SearchCommand.Execute(null);
-            btnBack.Click += (sender, args) => _viewModel.BackCommand.Execute(null);
             btnEditOrAdd.Click += (sender, args) => _viewModel.EditOrAddCommand.Execute(null);
             btnDelete.Click += (sender, args) => _viewModel.DeleteCommand.Execute(null);
 
@@ -64,7 +63,7 @@ namespace Inventory_Management_System.Views.Products
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            dataGridView.Refresh();
+            Utilities.ChangeForm(this, new Home());
         }
 
         private void btnEditOrAdd_Click(object sender, EventArgs e)

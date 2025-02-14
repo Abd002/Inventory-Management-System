@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Inventory_Management_System.ViewModel
 {
@@ -18,12 +19,12 @@ namespace Inventory_Management_System.ViewModel
         private string _password;
 
         public ICommand LoginCommand { get; set; }
-        public ICommand RegisterCommand { get; set; }
         public LoginViewModel()
         {
             // Command to handle the login button click
+            Username = "Username";
+            Password = "Password";
             LoginCommand = new RelayCommand(Login);
-            RegisterCommand = new RelayCommand(Register);
         }
 
         public string Username
@@ -58,6 +59,7 @@ namespace Inventory_Management_System.ViewModel
         private void Login()
         {
             Console.WriteLine("Login button clicked");
+            
             User user = Services.AuthServices.Authenticate(Username, Password);
 
             if (user == null)
@@ -66,12 +68,7 @@ namespace Inventory_Management_System.ViewModel
                 return;
             }
 
-            Utilities.ChangeForm((Form)Application.OpenForms["LogIn"], new Home());
 
-        }
-        private void Register()
-        {
-            Utilities.ChangeForm((Form)Application.OpenForms["LogIn"], new Register());
         }
 
 

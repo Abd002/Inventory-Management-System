@@ -1,5 +1,5 @@
 ﻿using Inventory_Management_System.ViewModel;
-using MetroFramework.Forms;
+using Inventory_Management_System.Views.LoginForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Management_System
+namespace Inventory_Management_System.Views.Register
 {
-    public partial class Register : MetroForm
+    public partial class Register : Form
     {
         private RegisterViewModel _viewModel;
         public Register()
@@ -27,15 +27,14 @@ namespace Inventory_Management_System
             btnRegister.Click += (sender, args) => _viewModel.LoginCommand.Execute(null);
         }
 
-
-        private void btnBack_Click_1(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-            Utilities.ChangeForm(this, new LogIn());
+
         }
 
-        private void btnRegister_Click_1(object sender, EventArgs e)
+        private void btnLogIn_Click(object sender, EventArgs e)
         {
-
+            Utilities.ChangeForm(this, new Inventory_Management_System.Views.LoginForm.LogIn());
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Inventory_Management_System.Helpers;
 using Inventory_Management_System.Models;
+using Inventory_Management_System.Views.LoginForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,10 @@ namespace Inventory_Management_System.ViewModel
         public ICommand LoginCommand { get; set; }
         public RegisterViewModel()
         {
-            _user = new User(); 
+            
+            _user = new User();
+            Username = "Username";
+            Password = "Password";
             LoginCommand = new RelayCommand(Register);
         }
         

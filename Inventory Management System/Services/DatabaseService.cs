@@ -1,4 +1,5 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
+using Inventory_Management_System.Helpers;
 using Inventory_Management_System.Models;
 using System;
 using System.CodeDom;
@@ -91,11 +92,10 @@ namespace Inventory_Management_System.Services
                     catch (Exception ex)
                     {
                         MessageBox.Show($"Error loading product: {ex.Message}");
-                        // Log the exception (e.g., using a logging framework)
                     }
                 }
             }
-            return product ?? new Product(); // Return a default product if not found
+            return product ?? new Product();
         }
 
         public static void AddProduct(Product product)
@@ -187,7 +187,7 @@ namespace Inventory_Management_System.Services
             }
         }
 
-        public static DataTable SearchProducts(string name, string category, int stock)
+        public static DataTable SearchProducts(string name = "", string category = "", StockStatus stock = StockStatus.HIGH_STOCK)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -201,9 +201,18 @@ namespace Inventory_Management_System.Services
                 {
                     sql += " AND Category = @Category";
                 }
-                if (stock > 0)
+
+                if (stock == StockStatus.HIGH_STOCK)
                 {
-                    sql += " AND QuantityInStock <= @Stock";
+                    sql += " AND QuantityInStock >= 100";
+                }
+                else if(stock == StockStatus.LOW_STOCK)
+                {
+                    sql += " AND QuantityInStock > 0 AND QuantityInStock < 100";
+                }
+                else
+                {
+                    sql += " AND QuantityInStock <= 0";
                 }
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -337,7 +346,7 @@ namespace Inventory_Management_System.Services
 
                                 using (SqlCommand setSessionCommand = new SqlCommand("SELECT CAST(SESSION_CONTEXT(N'UserID') AS INT );", connection))
                                 {
-                                    var  x = setSessionCommand.ExecuteReader();
+                                    var x = setSessionCommand.ExecuteReader();
                                     x.Read();
                                     int y = x.GetInt32(0);
 
@@ -359,6 +368,35 @@ namespace Inventory_Management_System.Services
             return user;
         }
 
-    }
+        public static DataTable GetAuditLog()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                const string sql = "SELECT * FROM Inventory.AuditLogs";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            dataTable.Load(reader);
+                            reader.Close();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("The requested order could not be loaded into the form.");
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+            return dataTable;
 
+        }
+    }
 }

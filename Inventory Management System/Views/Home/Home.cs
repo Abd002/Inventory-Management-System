@@ -1,5 +1,9 @@
-﻿using Inventory_Management_System.ViewModel;
+﻿using Inventory_Management_System.Services;
+using Inventory_Management_System.ViewModel;
+using Inventory_Management_System.Views.Admin;
+using Inventory_Management_System.Views.LoginForm;
 using Inventory_Management_System.Views.Products;
+using Inventory_Management_System.Views.RadGrid;
 using Inventory_Management_System.Views.Report;
 using MetroFramework.Forms;
 using System;
@@ -14,37 +18,37 @@ using System.Windows.Forms;
 
 namespace Inventory_Management_System
 {
-    public partial class Home : MetroForm
+    public partial class Home : Form
     {
-        private HomeViewModel _viewModel;
         public Home()
         {
             InitializeComponent();
-            _viewModel = new HomeViewModel();
-            btnAdmin.Click += (sender, args) => _viewModel.AdminCommand.Execute(null);
-            btnLogOut.Click += (sender, args) => _viewModel.LogoutCommand.Execute(null);
-            btnProducts.Click += (sender, args) => _viewModel.ProductsCommand.Execute(null);
-            btnReports.Click += (sender, args) => _viewModel.ReportsCommand.Execute(null);
-
+            btnAdmin.Visible = AuthServices.MainUser.IsAdmin;
         }
 
-        private void txtAdmin_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtReports_Click(object sender, EventArgs e)
         {
-            Utilities.ChangeForm(this, new Report());
+            Form form = new Report();
+            form.Show();
         }
 
         private void txtProducts_Click(object sender, EventArgs e)
         {
+            Utilities.ChangeForm(this, new RadGrid());
         }
 
-        private void txtLogOut_Click(object sender, EventArgs e)
-        {
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            AuthServices.Logout();
+            Utilities.ChangeForm(this, new LogIn());
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Form form = new Admin();
+            form.Show();    
         }
     }
 }

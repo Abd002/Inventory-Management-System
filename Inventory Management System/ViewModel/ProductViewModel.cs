@@ -24,7 +24,7 @@ namespace Inventory_Management_System.ViewModel
 
         private string _name_search;
         private string _category_search;
-        private string _selectedStock;
+        private StockStatus _selectedStock;
 
         public DataTable Data
         {
@@ -36,15 +36,19 @@ namespace Inventory_Management_System.ViewModel
                 OnRequestRefresh();
             }
         }
+
         public string SelectedStock
         {
-            get => _selectedStock;
+            get { return _selectedStock.ToString(); }
             set
             {
-                _selectedStock = value;
+                _selectedStock = (value == "OUT OF STOCK" ? StockStatus.OUT_OF_STOCK : (value == "LOW STOCK" ? StockStatus.LOW_STOCK : StockStatus.HIGH_STOCK)); ;
+                Data = DatabaseService.SearchProducts(_name_search, "", _selectedStock);
                 OnPropertyChanged(nameof(SelectedStock));
+                OnRequestRefresh();
             }
         }
+
 
         public string Id
         {
@@ -262,20 +266,8 @@ namespace Inventory_Management_System.ViewModel
         private void Search()
         {
             Console.WriteLine("Search button clicked");
-            int selectedStockSearch = 0;
-            if(SelectedStock == "LOW STOCK")
-            {
-                selectedStockSearch = 10;
-            }
-            else if (SelectedStock == "OUT OF STOCK")
-            {
-                selectedStockSearch = 0;
-            }else if(SelectedStock == "HIGH STOCK")
-            {
-                selectedStockSearch = 50;
-            }
 
-            Data = DatabaseService.SearchProducts(_name_search, _category_search, selectedStockSearch);
+            Data = DatabaseService.SearchProducts(_name_search, _category_search, _selectedStock);
         }
         private void Delete()
         {
