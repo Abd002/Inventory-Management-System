@@ -125,6 +125,7 @@ namespace Inventory_Management_System.ViewModel
                 return;
             }
             DatabaseService.AddProduct(_product);
+            MessageBox.Show("Product added successfully");
         }
 
 
