@@ -284,7 +284,7 @@ namespace Inventory_Management_System.Services
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                const string sql = "INSERT INTO Inventory.Users (Username, PasswordHash, IsAdmin) VALUES (@Username, @PasswordHash, @IsAdmin)";
+                const string sql = "INSERT INTO Inventory.Users (Username, PasswordHash, IsAdmin) VALUES (@Username, HASHBYTES('SHA2_512', @PasswordHash), @IsAdmin)";
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     command.Parameters.AddWithValue("@Username", user.Username);
@@ -307,17 +307,18 @@ namespace Inventory_Management_System.Services
             }
         }
 
-        public static User GetUser(string username)
+        public static User GetUser(string username, string password)
         {
             User user = null;
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                const string sql = "SELECT UserID, Username, PasswordHash, IsAdmin FROM Inventory.Users WHERE Username = @Username";
+                const string sql = "SELECT UserID, Username, PasswordHash, IsAdmin FROM Inventory.Users WHERE Username = @Username AND PasswordHash = HASHBYTES('SHA2_512', @PasswordHash)";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@PasswordHash", password);
 
                     try
                     {

@@ -95,9 +95,9 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(317, 329);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 13);
+            this.label1.Size = new System.Drawing.Size(143, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "don\'t have account ?       ";
+            this.label1.Text = "Don\'t have an account?       ";
             // 
             // btnRegister
             // 

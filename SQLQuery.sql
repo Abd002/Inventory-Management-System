@@ -42,7 +42,7 @@ DECLARE @OldProductName NVARCHAR(100), @OldDescription NVARCHAR(255), @OldQuanti
 DECLARE @ActionType NVARCHAR(50);
 DECLARE @UserID INT; 
 
--- Get the UserID from the session context
+
 SELECT @UserID = CAST(SESSION_CONTEXT(N'UserID') AS INT);
 
 IF EXISTS (SELECT 1 FROM inserted) AND EXISTS (SELECT 1 FROM deleted)
@@ -82,7 +82,7 @@ DECLARE @ProductID INT, @ProductName NVARCHAR(100), @Description NVARCHAR(255), 
 DECLARE @ActionType NVARCHAR(50);
 DECLARE @UserID INT; 
 
--- Get the UserID from the session context
+
 SELECT @UserID = CAST(SESSION_CONTEXT(N'UserID') AS INT);
 
 IF EXISTS (SELECT 1 FROM inserted)
@@ -116,7 +116,7 @@ DECLARE  @ProductName NVARCHAR(100), @Description NVARCHAR(255), @QuantityInStoc
 DECLARE @ActionType NVARCHAR(50);
 DECLARE @UserID INT; 
 
--- Get the UserID from the session context
+
 SELECT @UserID = CAST(SESSION_CONTEXT(N'UserID') AS INT);
 
 IF EXISTS (SELECT 1 FROM deleted)

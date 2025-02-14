@@ -20,15 +20,17 @@ namespace Inventory_Management_System.Views.RadGrid
         {
             _viewModel = new RadGridViewModel();
             InitializeComponent();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            gridViewCommandColumn1.DefaultText = "Delete";
-            gridViewCommandColumn1.HeaderText = "Delete";
-            gridViewCommandColumn1.Name = "DeleteColumn";
-            gridViewCommandColumn1.UseDefaultText = true;
-            gridViewCommandColumn1.Width = 15;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            if (AuthServices.MainUser.IsAdmin)
+            {
+                Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+                gridViewCommandColumn1.DefaultText = "Delete";
+                gridViewCommandColumn1.HeaderText = "Delete";
+                gridViewCommandColumn1.Name = "DeleteColumn";
+                gridViewCommandColumn1.UseDefaultText = true;
+                gridViewCommandColumn1.Width = 15;
+                this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewCommandColumn1});
-
+            }
 
             comboStock.SelectedIndex = 2;
             radGridView1.DataSource = _viewModel.Data;
@@ -47,6 +49,7 @@ namespace Inventory_Management_System.Views.RadGrid
             comboStock.DataBindings.Add("Text", _viewModel, "StockChoice", true, DataSourceUpdateMode.OnPropertyChanged);
 
             btnAddProduct.Visible = AuthServices.MainUser.IsAdmin;
+            btnEdit.Visible = AuthServices.MainUser.IsAdmin;
 
             DataTable dt = DatabaseService.GetProducts();
             comboCategory.DataSource = dt;

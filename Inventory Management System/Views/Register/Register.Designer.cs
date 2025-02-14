@@ -77,9 +77,9 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(308, 329);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 13);
+            this.label1.Size = new System.Drawing.Size(152, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "do u have account ?       ";
+            this.label1.Text = "Do you have an account?       ";
             // 
             // btnLogIn
             // 

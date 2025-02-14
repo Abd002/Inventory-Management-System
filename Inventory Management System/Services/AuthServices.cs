@@ -15,12 +15,9 @@ namespace Inventory_Management_System.Services
         public static User Authenticate(string username, string password)
         {
             password = hashPassword(password);
-            User user = DatabaseService.GetUser(username);
+
+            User user = DatabaseService.GetUser(username, password);
             if (user == null)
-            {
-                return null;
-            }
-            if(user.Password != password)
             {
                 return null;
             }

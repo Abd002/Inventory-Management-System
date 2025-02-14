@@ -66,12 +66,12 @@ namespace Inventory_Management_System.ViewModel
                 MessageBox.Show("Username and password must be at least 3 characters long");
                 return;
             }
-            if(Services.DatabaseService.GetUser(_user.Username) != null)
+            if(Services.DatabaseService.GetUser(_user.Username, _user.Password) != null)
             {
                 MessageBox.Show("Username already exists");
                 return;
             }
-
+            _user.IsAdmin = false;
 
             Services.DatabaseService.AddUser(_user);
             MessageBox.Show("User added successfully");

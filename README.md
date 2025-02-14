@@ -44,4 +44,19 @@
     │       ├───Register                # User registration 
     │       └───Report                  # Report generation 
 
-    ```
+    
+## Screens from running application
+* Login 
+    ![Local Image](./img/Login.PNG)
+* Register
+    ![Local Image](./img/Register.PNG)
+* Home 
+    ![Local Image](./img/Home.PNG)
+* Products using RadGrid
+    ![Local Image](./img/Products_usingRadGrid.PNG)
+* Adding Product 
+    ![Local Image](./img/Adding_Products.PNG)
+* Admin dashboard
+    ![Local Image](./img/Admin.PNG)
+* Report
+    ![Local Image](./img/Report.PNG)
