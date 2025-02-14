@@ -12,7 +12,8 @@ using System.Windows.Input;
 
 namespace Inventory_Management_System.ViewModel
 {
-    public class EditProductModelView
+    // view model for editing product
+    public class EditProductViewModel : BaseViewModel
     {
         private Product _product;
 
@@ -119,7 +120,7 @@ namespace Inventory_Management_System.ViewModel
             }
         }
         public ICommand EditProductCommand { get; set; }
-        public EditProductModelView()
+        public EditProductViewModel()
         {
             _product = new Product();
             Name = "Name";
@@ -171,12 +172,5 @@ namespace Inventory_Management_System.ViewModel
             MessageBox.Show("Product updated successfully");
         }
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

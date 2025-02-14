@@ -12,7 +12,7 @@ using System.Xml.Linq;
 
 namespace Inventory_Management_System.ViewModel
 {
-    public class RadGridViewModel : INotifyPropertyChanged
+    public class RadGridViewModel : BaseViewModel
     {
         private DataTable _data;
 
@@ -53,7 +53,22 @@ namespace Inventory_Management_System.ViewModel
             get { return _stockChoice.ToString(); }
             set
             {
-                _stockChoice = (value == "OUT OF STOCK" ? StockStatus.OUT_OF_STOCK : (value == "LOW STOCK" ? StockStatus.LOW_STOCK : StockStatus.HIGH_STOCK)); ;
+                if (value == "ALL" || value == "NULL")
+                {
+                    _stockChoice = StockStatus.ALL;
+                }
+                else if (value == "OUT OF STOCK")
+                {
+                    _stockChoice = StockStatus.OUT_OF_STOCK;
+                }
+                else if (value == "LOW STOCK")
+                {
+                    _stockChoice = StockStatus.LOW_STOCK;
+                }
+                else if (value == "HIGH STOCK")
+                {
+                    _stockChoice = StockStatus.HIGH_STOCK;
+                }
                 Data = DatabaseService.SearchProducts(_searchName, "", _stockChoice);
                 OnPropertyChanged(nameof(StockChoice));
                 OnRequestRefresh();
@@ -84,13 +99,6 @@ namespace Inventory_Management_System.ViewModel
         protected virtual void OnRequestRefresh()
         {
             RequestRefresh?.Invoke();
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

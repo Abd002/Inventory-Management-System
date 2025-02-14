@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace Inventory_Management_System.Services
 {
+
+    // authentication using users table
     public static class AuthServices
     {
         public static User MainUser = null;

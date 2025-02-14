@@ -25,6 +25,8 @@ namespace Inventory_Management_System.Views.Register
             txtPassword.DataBindings.Add("Text", _viewModel, "Password", true, DataSourceUpdateMode.OnPropertyChanged);
 
             btnRegister.Click += (sender, args) => _viewModel.LoginCommand.Execute(null);
+
+            boxAdmin.CheckedChanged += Checkbox_CheckedChanged;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -35,6 +37,10 @@ namespace Inventory_Management_System.Views.Register
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             Utilities.ChangeForm(this, new Inventory_Management_System.Views.LoginForm.LogIn());
+        }
+        private void Checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            _viewModel.IsChecked = boxAdmin.Checked;
         }
     }
 }

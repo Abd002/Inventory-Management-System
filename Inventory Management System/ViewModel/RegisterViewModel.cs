@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace Inventory_Management_System.ViewModel
 {
-    public class RegisterViewModel : INotifyPropertyChanged
+    public class RegisterViewModel : BaseViewModel
     {
         private User _user;
 
@@ -25,7 +25,18 @@ namespace Inventory_Management_System.ViewModel
             Password = "Password";
             LoginCommand = new RelayCommand(Register);
         }
-        
+        public bool IsChecked
+        {
+            get { return _user.IsAdmin; }
+            set
+            {
+                if (_user.IsAdmin != value)
+                {
+                    _user.IsAdmin = value;
+                    OnPropertyChanged(nameof(IsChecked));
+                }
+            }
+        }
 
         public string Username
         {
@@ -71,22 +82,21 @@ namespace Inventory_Management_System.ViewModel
                 MessageBox.Show("Username already exists");
                 return;
             }
-            _user.IsAdmin = false;
+            _user.IsAdmin = IsChecked;
 
             Services.DatabaseService.AddUser(_user);
             MessageBox.Show("User added successfully");
 
             Utilities.ChangeForm((Form)Application.OpenForms["Register"], new LogIn());
         }
-
-
-
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(string propertyName)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+
     }
 
 }

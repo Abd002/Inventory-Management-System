@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Inventory_Management_System.ViewModel
 {
-    public class ReportViewModel : INotifyPropertyChanged
+    public class ReportViewModel : BaseViewModel
     {
 
         private ReportDocument _reportDocument;
@@ -41,10 +41,5 @@ namespace Inventory_Management_System.ViewModel
             ReportDocument = report;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

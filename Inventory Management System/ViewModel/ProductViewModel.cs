@@ -16,7 +16,8 @@ using static Telerik.WinControls.UI.ValueMapper;
 
 namespace Inventory_Management_System.ViewModel
 {
-    public class ProductViewModel : INotifyPropertyChanged
+    // not used, because i used radgridview
+    public class ProductViewModel : BaseViewModel
     {
         private DataTable _data;
 
@@ -280,13 +281,6 @@ namespace Inventory_Management_System.ViewModel
             DatabaseService.DeleteProduct(_product.Id);
 
             updateData();
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
 

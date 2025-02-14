@@ -15,6 +15,7 @@ using System.Windows.Forms;
 namespace Inventory_Management_System.Services
 {
     //InventoryDB
+    // class to interact with the InventoryDB database
     internal static class DatabaseService
     {
         internal const string ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=InventoryDB;Integrated Security=True;";
@@ -187,7 +188,7 @@ namespace Inventory_Management_System.Services
             }
         }
 
-        public static DataTable SearchProducts(string name = "", string category = "", StockStatus stock = StockStatus.HIGH_STOCK)
+        public static DataTable SearchProducts(string name = "", string category = "", StockStatus stock = StockStatus.ALL)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -210,7 +211,7 @@ namespace Inventory_Management_System.Services
                 {
                     sql += " AND QuantityInStock > 0 AND QuantityInStock < 100";
                 }
-                else
+                else if (stock == StockStatus.OUT_OF_STOCK)
                 {
                     sql += " AND QuantityInStock <= 0";
                 }
@@ -338,7 +339,6 @@ namespace Inventory_Management_System.Services
                                     IsAdmin = reader.GetBoolean(reader.GetOrdinal("IsAdmin"))
                                 };
                                 reader.Close();
-                                // Set the session context for UserID
                                 using (SqlCommand setSessionCommand = new SqlCommand("EXEC sp_set_session_context @key = 'UserID', @value = @UserID,  @read_only = 1", connection))
                                 {
                                     setSessionCommand.Parameters.AddWithValue("@UserID", user.Id);

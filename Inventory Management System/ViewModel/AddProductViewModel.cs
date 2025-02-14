@@ -14,7 +14,8 @@ using System.Windows.Input;
 
 namespace Inventory_Management_System.ViewModel
 {
-    public class AddProductViewModel: INotifyPropertyChanged
+    // view model for adding product
+    public class AddProductViewModel: BaseViewModel
     {
         private Product _product;
 
@@ -117,6 +118,7 @@ namespace Inventory_Management_System.ViewModel
             AddProductCommand = new RelayCommand(AddProduct);
         }
 
+        // Add product to database
         private void AddProduct()
         {
             if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Description) || string.IsNullOrEmpty(Quantity) || string.IsNullOrEmpty(Price) || string.IsNullOrEmpty(Category) || string.IsNullOrEmpty(Supplier))
@@ -126,14 +128,6 @@ namespace Inventory_Management_System.ViewModel
             }
             DatabaseService.AddProduct(_product);
             MessageBox.Show("Product added successfully");
-        }
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

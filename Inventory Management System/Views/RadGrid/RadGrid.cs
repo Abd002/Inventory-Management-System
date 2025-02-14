@@ -20,6 +20,11 @@ namespace Inventory_Management_System.Views.RadGrid
         {
             _viewModel = new RadGridViewModel();
             InitializeComponent();
+
+            // Subscribe to the CellClick event of the RadGridView
+            this.radGridView1.CellClick += RadGridView1_CellClick;
+
+            // The rest of your code remains the same
             if (AuthServices.MainUser.IsAdmin)
             {
                 Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
@@ -29,20 +34,18 @@ namespace Inventory_Management_System.Views.RadGrid
                 gridViewCommandColumn1.UseDefaultText = true;
                 gridViewCommandColumn1.Width = 15;
                 this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewCommandColumn1});
+            gridViewCommandColumn1 });
             }
 
-            comboStock.SelectedIndex = 2;
+            comboStock.SelectedIndex = 1;
             radGridView1.DataSource = _viewModel.Data;
 
-            
             this.Load += new System.EventHandler(this.Terlik_Load);
 
             _viewModel.RequestRefresh += () =>
             {
                 radGridView1.DataSource = _viewModel.Data;
-                radGridView1.Refresh(); 
-                //_viewModel._stockChoice = (comboStock.Text == "OUT OF STOCK"?0:(comboStock.Text == "LOW STOCK"?50:1000));
+                radGridView1.Refresh();
             };
 
             textSearchName.DataBindings.Add("Text", _viewModel, "SearchName", true, DataSourceUpdateMode.OnPropertyChanged);
@@ -53,10 +56,11 @@ namespace Inventory_Management_System.Views.RadGrid
 
             DataTable dt = DatabaseService.GetProducts();
             comboCategory.DataSource = dt;
+            comboCategory.SelectedIndex = -1;
             comboCategory.DisplayMember = "Category";
-            comboCategory.SelectedIndex = 0;
             comboCategory.DataBindings.Add("Text", _viewModel, "CategoryChoice", true, DataSourceUpdateMode.OnPropertyChanged);
         }
+
         private void Terlik_Load(object sender, EventArgs e)
         {
             //radGridView1.DataSource = DatabaseService.GetProducts();
@@ -82,6 +86,7 @@ namespace Inventory_Management_System.Views.RadGrid
                 }
             }
         }
+
 
 
         private void DeleteRow(GridViewRowInfo row)

@@ -13,10 +13,10 @@ namespace Inventory_Management_System.Views.EditProduct
 {
     public partial class EditProduct : Form
     {
-        private Inventory_Management_System.ViewModel.EditProductModelView _viewModel;
+        private Inventory_Management_System.ViewModel.EditProductViewModel _viewModel;
         public EditProduct()
         {
-            _viewModel = new EditProductModelView();
+            _viewModel = new EditProductViewModel();
             InitializeComponent();
 
             txtID.DataBindings.Add("Text", _viewModel, "Id", true, DataSourceUpdateMode.OnPropertyChanged);

@@ -106,6 +106,7 @@ namespace Inventory_Management_System.Views.RadGrid
             this.comboStock.IsDerivedStyle = true;
             this.comboStock.ItemHeight = 20;
             this.comboStock.Items.AddRange(new object[] {
+            "ALL",
             "OUT OF STOCK",
             "LOW STOCK",
             "HIGH STOCK"});

@@ -20,12 +20,10 @@ namespace Inventory_Management_System.Views.LoginForm
             InitializeComponent();
             _viewModel = new LoginViewModel();
 
-            // Bind ViewModel to controls
             txtUsername.DataBindings.Add("Text", _viewModel, "Username", true, DataSourceUpdateMode.OnPropertyChanged);
             txtPassword.DataBindings.Add("Text", _viewModel, "Password", true, DataSourceUpdateMode.OnPropertyChanged);
 
 
-            // Bind the LoginCommand to the button
             btnLogIn.Click += (sender, args) => _viewModel.LoginCommand.Execute(null);
 
         }

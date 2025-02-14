@@ -19,7 +19,7 @@ namespace Inventory_Management_System.Views.Admin
             InitializeComponent();
 
             dataGridView.DataSource = DatabaseService.GetAuditLog();
-            dataGridView.Refresh(); // Refresh DataGridView when the event is raised
+            dataGridView.Refresh(); 
         }
     }
 }

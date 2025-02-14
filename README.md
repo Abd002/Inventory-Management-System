@@ -1,3 +1,19 @@
+### **Dependencies**
+   - Install-Package MetroModernUI
+   - MetroSet_UI
+   - Telerik    
+   - CrystalDecisions
+
+# **Inventory Management System**
+- ### Using the Observer pattern and the MVVM architecture.
+- ### Using a separate database in SQL Server to abstract the database from the program.
+- ### Using simple authentication using users table and setting the db session context each time we open a connection to be able to retreive the current logged in user inside the AuditLog triggers.
+
+### **Configurations**
+- StockEnum in Helpers/StockEnum.cs to set the threshold for searching.
+- In Crystal Reports, you can adjust the low stock threshold (default < 10).
+- Connection string int Services/DatabaseService.cs
+
 ## Small brief about all files
 -
     ```
@@ -60,3 +76,8 @@
     ![Local Image](./img/Admin.PNG)
 * Report
     ![Local Image](./img/Report.PNG)
+
+- ### Refrences
+    - https://www.youtube.com/watch?v=CCSOmEEC_28
+    - https://learn.microsoft.com/en-us/visualstudio/data-tools/create-a-simple-data-application-by-using-adonet?view=vs-2022&tabs=csharp
+    - https://www.youtube.com/watch?v=UG0NOT-nlmI&t=141s

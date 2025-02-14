@@ -113,6 +113,16 @@ namespace Inventory_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkBox {
+            get {
+                object obj = ResourceManager.GetObject("checkBox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit_Button {
             get {
                 object obj = ResourceManager.GetObject("Edit_Button", resourceCulture);

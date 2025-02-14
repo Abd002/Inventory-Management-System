@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Inventory_Management_System.ViewModel
 {
-    public class LoginViewModel : INotifyPropertyChanged
+    public class LoginViewModel : BaseViewModel
     {
         private string _username;
         private string _password;
@@ -21,7 +21,6 @@ namespace Inventory_Management_System.ViewModel
         public ICommand LoginCommand { get; set; }
         public LoginViewModel()
         {
-            // Command to handle the login button click
             Username = "Username";
             Password = "Password";
             LoginCommand = new RelayCommand(Login);
@@ -71,13 +70,6 @@ namespace Inventory_Management_System.ViewModel
 
         }
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
     }
 }

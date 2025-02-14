@@ -3,6 +3,7 @@ using System;
 
 namespace Inventory_Management_System
 {
+    // utility methods that can be used in the application
     internal static class Utilities
     {
         public static void ChangeForm(Form currentForm, Form newForm)

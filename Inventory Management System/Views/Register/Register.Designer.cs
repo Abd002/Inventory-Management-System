@@ -30,13 +30,14 @@
         {
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.PictureBox();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnRegister = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.boxAdmin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnRegister)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -62,15 +63,6 @@
             this.txtUsername.TabIndex = 6;
             this.txtUsername.Text = "Username";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Inventory_Management_System.Properties.Resources.Register;
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(836, 443);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -86,24 +78,12 @@
             this.btnLogIn.AutoSize = true;
             this.btnLogIn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogIn.Location = new System.Drawing.Point(434, 329);
+            this.btnLogIn.Location = new System.Drawing.Point(444, 329);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(39, 13);
             this.btnLogIn.TabIndex = 10;
             this.btnLogIn.Text = "Login .";
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRegister.Image = global::Inventory_Management_System.Properties.Resources.Register_Button;
-            this.btnRegister.Location = new System.Drawing.Point(300, 290);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(207, 36);
-            this.btnRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRegister.TabIndex = 11;
-            this.btnRegister.TabStop = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // metroSetControlBox1
             // 
@@ -134,11 +114,46 @@
             this.metroSetControlBox1.ThemeAuthor = "Narwin";
             this.metroSetControlBox1.ThemeName = "MetroLite";
             // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRegister.Image = global::Inventory_Management_System.Properties.Resources.Register_Button;
+            this.btnRegister.Location = new System.Drawing.Point(300, 290);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(207, 36);
+            this.btnRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRegister.TabIndex = 11;
+            this.btnRegister.TabStop = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.Image = global::Inventory_Management_System.Properties.Resources.Register;
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(836, 443);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // boxAdmin
+            // 
+            this.boxAdmin.AutoSize = true;
+            this.boxAdmin.BackgroundImage = global::Inventory_Management_System.Properties.Resources.checkBox;
+            this.boxAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxAdmin.Location = new System.Drawing.Point(366, 256);
+            this.boxAdmin.Name = "boxAdmin";
+            this.boxAdmin.Size = new System.Drawing.Size(66, 19);
+            this.boxAdmin.TabIndex = 13;
+            this.boxAdmin.Text = "Admin";
+            this.boxAdmin.UseVisualStyleBackColor = true;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 441);
+            this.Controls.Add(this.boxAdmin);
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogIn);
@@ -150,8 +165,8 @@
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRegister)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +181,6 @@
         private System.Windows.Forms.Label btnLogIn;
         private System.Windows.Forms.PictureBox btnRegister;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
+        private System.Windows.Forms.CheckBox boxAdmin;
     }
 }

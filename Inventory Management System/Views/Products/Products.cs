@@ -27,7 +27,6 @@ namespace Inventory_Management_System.Views.Products
 
             tblAdmin.Visible = AuthServices.MainUser.IsAdmin;
 
-            // Bind ViewModel to controls
             txtNameSearch.DataBindings.Add("Text", _viewModel, "Name_search", true, DataSourceUpdateMode.OnPropertyChanged);
             txtCategorySearch.DataBindings.Add("Text", _viewModel, "Category_search", true, DataSourceUpdateMode.OnPropertyChanged);
             //txtStock.DataBindings.Add("Text", _viewModel, "Stock_search", true, DataSourceUpdateMode.OnPropertyChanged);
@@ -43,7 +42,6 @@ namespace Inventory_Management_System.Views.Products
             txtCategory.DataBindings.Add("Text", _viewModel, "Category", true, DataSourceUpdateMode.OnPropertyChanged); 
 
 
-            // Bind the LoginCommand to the button
             btnSearch.Click += (sender, args) => _viewModel.SearchCommand.Execute(null);
             btnEditOrAdd.Click += (sender, args) => _viewModel.EditOrAddCommand.Execute(null);
             btnDelete.Click += (sender, args) => _viewModel.DeleteCommand.Execute(null);
@@ -51,7 +49,7 @@ namespace Inventory_Management_System.Views.Products
             _viewModel.RequestRefresh += () =>
             {
                 dataGridView.DataSource = _viewModel.Data;
-                dataGridView.Refresh(); // Refresh DataGridView when the event is raised
+                dataGridView.Refresh(); 
                 _viewModel.SelectedStock = comboBoxStock.Text;
             };
         }

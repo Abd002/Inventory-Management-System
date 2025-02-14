@@ -7,6 +7,7 @@ using System.Windows.Input;
 
 namespace Inventory_Management_System.Helpers
 {
+    // simple class that implements ICommand interface to be used as a command in the view model
     public class RelayCommand : ICommand
     {
         private readonly Action _execute;
